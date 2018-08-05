@@ -1,0 +1,42 @@
+server:
+   port: 8771
+   tomcat:
+      accept-count: 1000
+      max-threads: 1000
+      max-connections: 2000
+
+eureka:
+  client:
+     serviceUrl:
+        defaultZone: http://172.31.100.90:8003/eureka/
+
+  instance:
+     prefer-ip-address: true
+      # 每隔10s发送一次心跳
+     lease-renewal-interval-in-seconds: 10
+      # 告知服务端30秒还未收到心跳的话，就将该服务移除列表
+     lease-expiration-duration-in-seconds: 30
+
+spring:
+   application:
+             name: service-tax
+dubbo:
+  registry:
+    address: 172.31.100.90:2001
+
+service:
+  tax:
+    task-env: product
+    taskCallBackUrl: http://172.31.100.90:8761/api/tax/task/callback
+    #verifyUrl: http://172.31.100.90:8761/api/oauth/token/verify2
+    verifyUrl: http://172.31.100.126:9181/token/verify
+    getCookieUrl: http://172.31.100.126:8761/api/sys-login/login/
+    taskUrl: http://172.31.100.90:8761/api/task/lifecycle/start/%s/sn/%s/%s
+file:
+  upload:
+    path: /data/files
+
+tax:
+  router:
+    login:
+       platform: web

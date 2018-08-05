@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--dubbo-->
+
+    <dubbo:reference interface="com.yun9.biz.bill.BizBillInvoiceService" version="1.0.0" id="bizBillInvoiceService"/>
+
+
+    <dubbo:reference interface="com.yun9.biz.bill.BizBillInvoiceItemService" version="1.0.0" id="bizBillInvoiceItemService"/>
+    <dubbo:reference interface="com.yun9.biz.bill.BizBillInvoiceCalculateService" version="1.0.0" id="bizBillInvoiceCalculateService"/>
+
+    <dubbo:reference interface="com.yun9.biz.bill.BizBillCollectService" version="1.0.0" id="bizBillCollectService"/>
+
+
+</beans>

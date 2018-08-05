@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--dubbo-->
+
+    <dubbo:reference interface="com.yun9.biz.md.BizMdCompanyAccountService" version="1.0.0" id="bizMdCompanyAccountService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdCompanyService" version="1.0.0" id="bizMdCompanyService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdAreaService" version="1.0.0" id="bizMdAreaService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdInstService" version="1.0.0" id="bizMdInstService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdInstClientService" version="1.0.0" id="bizMdInstClientService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdAccountCycleService" version="1.0.0" id="bizMdAccountCycleService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdInstClientProcessService" version="1.0.0" id="bizMdInstClientProcessService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdCompanyTaxBankService" version="1.0.0" id="bizMdCompanyTaxBankService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdInstOrgTreeClientService" version="1.0.0" id="bizMdInstOrgTreeClientService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdCompanyTaxService" version="1.0.0" id="bizMdCompanyTaxService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdAccountService" version="1.0.0" id="bizMdAccountService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdCompanyTaxCategoryService" version="1.0.0" id="bizMdCompanyTaxCategoryService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdDictionaryCodeService" version="1.0.0" id="bizMdDictionaryCodeService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdInstOrgTreeUserService" version="1.0.0" id="bizMdInstOrgTreeUserService"/>
+    <dubbo:reference interface="com.yun9.biz.md.BizMdInstUserService" version="1.0.0" id="bizMdInstUserService"/>
+</beans>

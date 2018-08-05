@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/*
+*.iml
+service-tax.properties
+service-tax.xml
+module_service-tax.xml
+service-tax-core/module_service-tax-core.xml
+.idea
+target/**
+*/target/**
+*/*/target/**
+
+*/*/environment/local/**
+**/environment/local/**
+.DS_Store
+*.puml
+/service-tax-controller/doc/

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--dubbo-->
+    <dubbo:reference interface="com.yun9.biz.tax.ops.BizDeductService" version="1.0.0" id="bizDeductService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.ops.BizTaxSingleStartService" version="1.0.0" id="bizTaxSingleStartService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.ops.BizTaxTaskCallService" version="1.0.0" id="bizTaxTaskCallService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.ops.BizTaxCompanyTaxStartService" version="1.0.0" id="bizTaxCompanyTaxStartService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxMdOfficeCategoryPropertyService" version="1.0.0" id="bizTaxMdOfficeCategoryPropertyService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxMdOfficeCategoryReportService" version="1.0.0" id="bizTaxMdOfficeCategoryReportService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxMdOfficeCategoryService" version="1.0.0" id="bizTaxMdOfficeCategoryService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceService" version="1.0.0" id="bizTaxInstanceService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryService" version="1.0.0" id="bizTaxInstanceCategoryService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxMdCategoryService" version="1.0.0" id="bizTaxMdCategoryService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceSeqService" version="1.0.0" id="bizTaxInstanceSeqService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryReportService" version="1.0.0" id="bizTaxInstanceCategoryReportService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxTaskPropertyService" version="1.0.0" id="bizTaxTaskPropertyService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryAttachmentService" version="1.0.0" id="bizTaxInstanceCategoryAttachmentService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxPropertiesService" version="1.0.0" id="bizTaxPropertiesService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryDeductService" version="1.0.0" id="bizTaxInstanceCategoryDeductService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryFrService" version="1.0.0" id="bizTaxInstanceCategoryFrService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceDataService" version="1.0.0" id="bizTaxInstanceDataService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.ops.BizSynScreenShotService" version="1.0.0" id="bizSynScreenShotService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.ops.BizTaxDeclareService" version="1.0.0" id="bizTaxDeclareService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryHistoryService" version="1.0.0" id="bizTaxInstanceCategoryHistoryService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxMdMsgCodeService" version="1.0.0" id="bizTaxMdMsgCodeService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxMdOfficeCategoryCycleService" version="1.0.0" id="bizTaxMdOfficeCategoryCycleService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryVatSmallService" version="1.0.0" id="bizTaxInstanceCategoryVatSmallService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.ops.BizRepealTaxService" version="1.0.0" id="bizRepealTaxService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxCompanyCategoryService" version="1.0.0" id="bizTaxCompanyCategoryService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryBitService" version="1.0.0" id="bizTaxInstanceCategoryBitService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.ops.BizTaxMultipleStartService" version="1.0.0" id="bizTaxMultipleStartService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryPersonalPayrollItemService" version="1.0.0" id="bizTaxInstanceCategoryPersonalPayrollItemService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryPersonalPayrollService" version="1.0.0" id="bizTaxInstanceCategoryPersonalPayrollService"/>
+
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryYhService" version="1.0.0" id="bizTaxInstanceCategoryYhService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryFzService" version="1.0.0" id="bizTaxInstanceCategoryFzService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryPersonalBusinessService" version="1.0.0" id="bizTaxInstanceCategoryPersonalBusinessService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryDataService" version="1.0.0" id="bizTaxInstanceCategoryDataService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxCompanyBankService" version="1.0.0" id="bizTaxCompanyBankService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryPersonalBusinessItemService" version="1.0.0" id="bizTaxInstanceCategoryPersonalBusinessItemService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryOriginalDataService" version="1.0.0" id="bizTaxInstanceCategoryOriginalDataService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxMdOfficeService" version="1.0.0" id="bizTaxMdOfficeService"/>
+
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryVatNormalService" version="1.0.0" id="bizTaxInstanceCategoryVatNormalService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryFzItemService" version="1.0.0" id="bizTaxInstanceCategoryFzItemService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxCompanyTaxService" version="1.0.0" id="bizTaxCompanyTaxService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxCompanyTaxGsService" version="1.0.0" id="bizTaxCompanyTaxGsService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxCompanyTaxDsService" version="1.0.0" id="bizTaxCompanyTaxDsService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxNoticeInstRecordService" version="1.0.0" id="bizTaxNoticeInstRecordService"/>
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxNoticeInstConfigService" version="1.0.0" id="bizTaxNoticeInstConfigService"/>
+    <dubbo:reference interface="com.yun9.sys.SysUserService" version="1.0.0" id="sysUserService"/>
+
+
+    <dubbo:reference interface="com.yun9.biz.tax.BizTaxInstanceCategoryYhItemService" version="1.0.0" id="bizTaxInstanceCategoryYhItemService"/>
+
+    <dubbo:reference interface="com.yun9.biz.tax.event.VatEventService" version="1.0.0" id="vatEventService"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

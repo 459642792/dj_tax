@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <property name="LOG_HOME" value="/data/logs/service-tax"/>
+
+    <!--全局错误文件-->
+    <appender name="all_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy/MM/dd-HH:mm:ss.SSS} %level [%thread] %logger:%line>>%msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <!--项目错误文件-->
+    <appender name="yun9_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/yun9_error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}_yun9.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy/MM/dd-HH:mm:ss.SSS} %level [%thread] %logger:%line>>%msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <!--控制台日志-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy/MM/dd-HH:mm:ss.SSS} %level [%thread] %logger:%line>>%msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>debug</level>
+        </filter>
+    </appender>
+
+    <logger name="org.apache.zookeeper" level="info"/>
+    <logger name="com.netflix.discovery" level="info"/>
+    <logger name="org.springframework" level="info"/>
+    <logger name="org.apache.http" level="ERROR"/>
+    <logger name="com.alibaba.com.caucho.hessian.io.SerializerFactory" level="ERROR"/>
+
+
+    <logger name="com.yun9" level="debug" additivity="true">
+        <!--<appender-ref ref="console"/>-->
+        <appender-ref ref="yun9_error"/>
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="console"/>
+        <appender-ref ref="all_error"/>
+    </root>
+</configuration>

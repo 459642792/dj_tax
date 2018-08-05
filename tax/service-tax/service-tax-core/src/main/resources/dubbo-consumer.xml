@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <dubbo:application name="service-marketing-consumer"/>
+
+    <dubbo:registry id="zk-user" address="${dubbo.registry.address}" protocol="zookeeper" />
+
+    <dubbo:consumer registry="zk-user" check="false"/>
+
+    <!--需要依赖的服务-->
+    <import resource="dubbo-consumer-tax.xml"/>
+    <import resource="dubbo-consumer-bill.xml"/>
+    <import resource="dubbo-consumer-md.xml"/>
+    <import resource="dubbo-consumer-task.xml"/>
+    <import resource="dubbo-consumer-report.xml"/>
+
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--实例任务-->
+    <dubbo:reference interface="com.yun9.biz.task.BizTaskService" version="1.0.0" id="bizTaskService"/>
+    <!--任务定义 -->
+    <!--<dubbo:reference interface="com.yun9.biz.task.BizTaskDefineService" version="1.0.0" id="bizTaskDefineService"/>-->
+
+    <!--<dubbo:reference interface="com.yun9.biz.task.BizTaskCallbackService" version="1.0.0" id="bizTaskCallbackService"/>-->
+
+    <!--<dubbo:reference interface="com.yun9.biz.task.BizTaskInstanceService" version="1.0.0" id="bizTaskInstanceService"/>-->
+
+</beans>

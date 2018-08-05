@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>service-tax</artifactId>
+        <groupId>com.yun9.service.tax</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <biz-api-version>1.4-SNAPSHOT</biz-api-version>
+        <biz-report-api-version>1.5-SNAPSHOT</biz-report-api-version>
+        <biz-api-md-version>1.6.3-SNAPSHOT</biz-api-md-version>
+        <biz-api-report-version>1.5-SNAPSHOT</biz-api-report-version>
+        <biz-api-tax-version>1.6.5-SNAPSHOT</biz-api-tax-version>
+        <biz-api-bill-version>1.1-SNAPSHOT</biz-api-bill-version>
+
+    </properties>
+
+    <artifactId>service-tax-core</artifactId>
+
+
+    <dependencies>
+        <!--md api-->
+        <dependency>
+            <artifactId>biz-md-api</artifactId>
+            <groupId>com.yun9.biz.md</groupId>
+            <version>${biz-api-md-version}</version>
+        </dependency>
+
+        <!--tax api-->
+        <dependency>
+            <artifactId>biz-tax-api</artifactId>
+            <groupId>com.yun9.biz.tax</groupId>
+            <version>${biz-api-tax-version}</version>
+        </dependency>
+        <!--任务中心API-->
+        <dependency>
+            <groupId>com.yun9.biz.task</groupId>
+            <artifactId>biz-task-api</artifactId>
+            <version>${biz-api-version}</version>
+        </dependency>
+        <!--report API-->
+        <dependency>
+            <groupId>com.yun9.biz.report</groupId>
+            <artifactId>biz-report-api</artifactId>
+            <version>${biz-report-api-version}</version>
+        </dependency>
+
+
+        <!--report API-->
+        <dependency>
+            <groupId>com.yun9.biz.bill</groupId>
+            <artifactId>biz-bill-api</artifactId>
+            <version>${biz-api-bill-version}</version>
+        </dependency>
+        <!--dubbo 订阅消费-->
+        <dependency>
+            <groupId>com.yun9.boot.starters</groupId>
+            <artifactId>yun9-boot-starter-consumer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yun9.framework</groupId>
+            <artifactId>framework-webdriver</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yun9.framework</groupId>
+            <artifactId>framework-webdriver</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yun9.sys</groupId>
+            <artifactId>sys-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.6.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <!--解析excel依赖开始-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.xmlbeans</groupId>
+            <artifactId>xmlbeans</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <!--&lt;!&ndash;解析excel依赖结束&ndash;&gt;-->
+
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>3.3</version>
+        </dependency>
+        <!--文件压缩使用-->
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.9.7</version>
+        </dependency>
+        <!--解析excel依赖结束-->
+    </dependencies>
+</project>

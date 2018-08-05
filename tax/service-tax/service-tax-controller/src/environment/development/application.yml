@@ -1,0 +1,38 @@
+server:
+   port: 8771
+   context-path: /tax
+eureka:
+  client:
+     serviceUrl:
+        defaultZone: http://120.79.55.87:8003/eureka/
+     register-with-eureka: false
+     fetch-registry: false
+  instance:
+     prefer-ip-address: true
+      # 每隔10s发送一次心跳
+     lease-renewal-interval-in-seconds: 10
+      # 告知服务端30秒还未收到心跳的话，就将该服务移除列表
+     lease-expiration-duration-in-seconds: 30
+
+spring:
+   application:
+             name: service-tax
+dubbo:
+  registry:
+    address: 127.0.0.1:2181
+
+service:
+  tax:
+    task-env: service-tax-dev
+    taskCallBackUrl: http://120.79.55.87/tax/callback
+    verifyUrl: http://120.79.55.87:9181/token/verify
+    taskUrl: http://test.yun9.com:8761/api/task/lifecycle/start/%s/sn/%s/%s
+    getCookieUrl: http://test.yun9.com:8761/api/sys-login/login/
+file:
+  upload:
+    path: /data/files
+
+tax:
+  router:
+    login:
+       platform: web
